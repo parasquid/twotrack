@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/parasquid/twotrack.svg?branch=master)](https://travis-ci.org/parasquid/twotrack)
+
 # Twotrack
 
 Implements the Railway Oriented Programming pattern (https://fsharpforfunandprofit.com/rop/)
@@ -23,7 +25,7 @@ Or install it yourself as:
 Assumptions:
 * The "left" and "right" operations need to respond to `call`. That means you can pass an object that has a `call` method, a `Proc` or a `lambda`. Ruby doesn't allow passing two blocks unfortunately, so for now there's no ability to pass blocks.
 * The pipeline starts from the "left" track.
-* If the previous operation returned an object that respnds to `switch?` and if it responds with `true` then the tracks switch to the "right" operation.
+* If the previous operation returned an object that responds to `switch?` and if it responds with `true` then the tracks will switch to the "right" operation.
 * There is no way to switch from the "right" track to the "left" track.
 * The data returned from the previous operation is passed to the next operation's `call` handler through a block.
 
